@@ -19,7 +19,16 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title"></h3>
         <span />
-        { /* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ }
+          <ul>
+            <li>{this.props.title}</li>
+            <li>{this.props.genres.join(', ')}</li>
+          </ul>
+          if ({this.props.IMDBRating === null}) {
+            <h4>No Rating Found</h4>
+          } else {
+            <img> {this.props.IMDBRating}</img>
+          }
+            
         <span />
         <h5 className="genres"></h5>
       </div>
